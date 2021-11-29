@@ -4,11 +4,12 @@
   border: 10px solid black;
   min-height: 80vh;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .single-unit {
   border: 2px solid black;
-  max-height: 200px;
+  max-height: 170px;
   /* max-width: 400px; */
   margin: 20px;
   padding: 30px;

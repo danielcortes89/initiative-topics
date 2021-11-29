@@ -1,30 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
+import TopicDisplayComponent from './components/TopicDisplayComponent';
+
+import { topics as Data } from './DATA/data'
 
 function App() {
     return (
         <div className="App">
-        	<div className="single-unit">
-				<h3>The Subject</h3>
-				<span>Status: Planned</span>
-				<p>
-					Current Order: 1
-				</p>
-      		</div>
-			  <div className="single-unit">
-				<h3>The Subject</h3>
-				<span>Status: Planned</span>
-				<p>
-					Current Order: 1
-				</p>
-      		</div>
-			  <div className="single-unit">
-				<h3>The Subject</h3>
-				<span>Status: Planned</span>
-				<p>
-					Current Order: 1
-				</p>
-      		</div>
+			{Data.map(unit => {
+				return <TopicDisplayComponent unit={unit} key={unit.id}/>
+			})}  
     	</div>
   	);
 }
